@@ -95,7 +95,8 @@ class Array {
         System.out.println();
         System.out.println(sum[0]+sum[1]+sum[2]);
         
-
+        // int arr[] = new int [];
+        // int arra[] = {}
 
 
 

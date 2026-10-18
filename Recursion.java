@@ -41,16 +41,30 @@ class Recursion {
     //     printFib(b,c,n-1);
     // }
 
-    public static int calcpow(int x , int n){
-        if(n==0){
-            return 1;
+    // public static int calcpow(int x , int n){
+    //     if(n==0){
+    //         return 1;
+    //     }
+    //     if(x==0){
+    //         return 0;
+    //     }
+    //     int xpownm1 = calcpow(x , n-1);
+    //     int z = x * xpownm1;
+    //     return z;
+    // }
+
+    public static void towerofhanoi(int n , String scr , String helper , String dest){
+        if(n==1){
+            System.out.println("transfer of "+n+" form"+ scr+" to "+dest);
+            return;
         }
-        if(x==0){
-            return 0;
-        }
-        int xpownm1 = calcpow(x , n-1);
-        int z = x * xpownm1;
-        return z;
+
+        towerofhanoi(n-1, scr, dest, helper);
+        System.out.println("transfer of "+n+" form "+ scr+" to "+ dest);
+        towerofhanoi(n-1, helper , scr , dest);
+        
+
+
     }
 
 
@@ -77,10 +91,17 @@ class Recursion {
         // int n = 10;
         // printFib(a,b,n-2);
 
-        // Q--> 
-        int x = 2 , n = 5;
-        int ans = calcpow(x,n);
-        System.out.println(ans);
+        // Q--> print x^n stack height = n
+        // int x = 2 , n = 5;
+        // int ans = calcpow(x,n);
+        // System.out.println(ans);
+
+        // i
+
+
+
+        int n = 3;
+        towerofhanoi(n, "S" , "H", "D");
 
 
         

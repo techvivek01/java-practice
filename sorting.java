@@ -67,10 +67,5 @@ class Sorting {
     printArray(arr);
 
 
-
-
-
-
-    
     }
 }
