@@ -38,7 +38,7 @@ public class OB {
         //  System.out.println(ans[x]);
         // }
         
-        
+
 
     }
 }

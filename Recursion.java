@@ -53,18 +53,43 @@ class Recursion {
     //     return z;
     // }
 
-    public static void towerofhanoi(int n , String scr , String helper , String dest){
-        if(n==1){
-            System.out.println("transfer of "+n+" form"+ scr+" to "+dest);
+    // public static void towerofhanoi(int n , String scr , String helper , String dest){
+    //     if(n==1){
+    //         System.out.println("transfer of "+n+" form"+ scr+" to "+dest);
+    //         return;
+    //     }
+
+    //     towerofhanoi(n-1, scr, dest, helper);
+    //     System.out.println("transfer of "+n+" form "+ scr+" to "+ dest);
+    //     towerofhanoi(n-1, helper , scr , dest);
+    
+    // }
+
+    // public static void printrevers(String str , int ind){
+    //     if(ind ==0){
+    //         System.out.println(str.charAt(ind));
+    //         return;
+    //     }
+    //     System.out.println(str.charAt(ind));
+    //     printrevers(str , ind-1);
+
+    // }
+
+     static void subsequences(String str, int index, String current) {
+
+        // Base case
+        if (index == str.length()) {
+            if (!current.isEmpty()) {
+                System.out.println(current);
+            }
             return;
         }
 
-        towerofhanoi(n-1, scr, dest, helper);
-        System.out.println("transfer of "+n+" form "+ scr+" to "+ dest);
-        towerofhanoi(n-1, helper , scr , dest);
-        
+        // Include current character
+        subsequences(str, index + 1, current + str.charAt(index));
 
-
+        // Exclude current character
+        subsequences(str, index + 1, current);
     }
 
 
@@ -97,11 +122,19 @@ class Recursion {
         // System.out.println(ans);
 
         // i
+        // Tower of hanoi
+        // int n = 3;
+        // towerofhanoi(n, "S" , "H", "D");
+
+        // revers abcd to dcba
+        // String str = "abcd";
+        // printrevers(str , str.length()-1);
+
+        String str = "abc";
+
+        subsequences(str, 0, "");
 
 
-
-        int n = 3;
-        towerofhanoi(n, "S" , "H", "D");
 
 
         
