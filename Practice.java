@@ -1,5 +1,7 @@
+import java.util.*;
 class Practice{
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         // Q1-- print numbers from 1 to 100
         // for(int i=0 ; i<=100 ; i++){
@@ -236,8 +238,8 @@ class Practice{
         // }
         // System.out.println(even);
 
-        // Q--24 count the number of even digits in a number
-        
+        // Q--24 count the number of odd digits in a number
+       
         
         
 
