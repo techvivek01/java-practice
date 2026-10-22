@@ -115,11 +115,6 @@ class Strings{
         System.out.println(name11.substring(0,1));
         System.out.println(name11.length());
 
-        
-
-        
-
-
 
         
 

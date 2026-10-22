@@ -239,6 +239,7 @@ class Practice{
         // System.out.println(even);
 
         // Q--24 count the number of odd digits in a number
+        
        
         
         
