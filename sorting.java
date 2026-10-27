@@ -1,3 +1,4 @@
+import java.util.*;
 class Sorting {
     // public static void printArray(int arr[]){
     //     for(int i =0 ; i<arr.length ; i++){
@@ -5,6 +6,7 @@ class Sorting {
     //     }
     // }
     public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
         // int arr[] = {7,2,4,8,9,1,3};
 
         // for(int i = 0 ; i<arr.length-1;i++){
@@ -68,24 +70,83 @@ class Sorting {
 
 
     // Q--> using bubble sort
-    int arr[] = {5,2,8,1,3};
+//     int arr[] = {5,2,8,1,3};
     
-    for(int i = 0 ; i<arr.length-1 ; i++){
+//     for(int i = 0 ; i<arr.length-1 ; i++){
 
-        for(int j = 0 ;j<arr.length-1-i ; j++){
+//         for(int j = 0 ;j<arr.length-1-i ; j++){
+//             if(arr[j]>arr[j+1]){
+//                 int temp = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = temp;
+//             }
+        
+//         }
+// }
+//     System.out.println("Sorted array:");
+
+
+//     for(int i=0 ; i<arr.length; i++){
+//         System.out.println(arr[i] + " ");
+//         }
+
+
+
+    // Q--> bubble sort
+    
+    // float[] arr = {1.1f , 1.9f , 5.1f , 8 ,9, 4 , 0};
+    // for( int i = 0 ; i<arr.length-1 ; i++){
+    //     for(int j = 0 ; j<arr.length-1-i ; j++){
+    //         if(arr[j]>arr[j+1]){
+    //             float temp = arr[j];
+    //             arr[j] = arr[j+1];
+    //             arr[j+1] = temp ;
+    //         }
+    //     }
+    // }
+    // System.out.println("sorted array");
+    // for(int i = 0 ; i<arr.length ; i++){
+    //     System.out.println(arr[i] + " ");
+    // }
+
+    // float arr[] = {-1 , -9, -0 , 1 ,9, 20 , 100 , 1.5f};
+    // for(int i = 0 ; i<arr.length-1 ; i++){
+    //     for(int j = 0 ; j<arr.length-1-i ; j++){
+    //         if(arr[j]> arr[j+1]){
+    //             float temp = arr[j];
+    //             arr[j] = arr[j+1];
+    //             arr[j+1] = temp;   
+    //         }
+    //     }
+    // }
+    // System.out.print("Sorted array:");
+    // for(int i = 0 ; i<arr.length ; i++){
+    //     System.out.print(arr[i] + " ");
+    // }
+
+    // Q-->
+    System.out.print("Enter array size:");
+    int n = sc.nextInt();
+    int arr[] = new int[n];
+    System.out.println("Enter array");
+    for(int i = 0 ; i<n ; i++){
+        arr[i] = sc.nextInt();
+    }
+
+    for(int i =0; i<n-1 ;i++){
+        for(int j = 0 ; j<n-1-i; j++){
             if(arr[j]>arr[j+1]){
                 int temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
             }
-        
         }
-}
-    System.out.println("Sorted array:");
+    }
+    System.out.print("Sorted array:");
+    for(int i =0  ; i<n; i++ ){
+        System.out.print(arr[i]+" " );
+    }
+    sc.close();
 
-
-    for(int i=0 ; i<arr.length; i++){
-        System.out.println(arr[i] + " ");
-        }
     }
 }
