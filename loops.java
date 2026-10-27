@@ -1,5 +1,5 @@
 import java.util.*;
-class For{
+class loops{
     public static void main(String args[]){ 
         Scanner sc = new Scanner(System.in);
         // int n = sc.nextInt();
@@ -30,7 +30,7 @@ class For{
         //     System.out.println("hello Mr vivek");
         // } while (k<10);
 
-        //  While loop
+ //  While loop
         // int j=0;
         // while(j<10){
         //     System.out.println("what's up vivek");

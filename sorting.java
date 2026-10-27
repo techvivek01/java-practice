@@ -1,10 +1,10 @@
 class Sorting {
-    public static void printArray(int arr[]){
-        for(int i =0 ; i<arr.length ; i++){
-            System.out.print(arr[i]);
-        }
-    }
-    public static void main(String args[]){
+    // public static void printArray(int arr[]){
+    //     for(int i =0 ; i<arr.length ; i++){
+    //         System.out.print(arr[i]);
+    //     }
+    // }
+    public static void main(String[] args){
         // int arr[] = {7,2,4,8,9,1,3};
 
         // for(int i = 0 ; i<arr.length-1;i++){
@@ -52,20 +52,40 @@ class Sorting {
 
     // Seletion sort
 
-    int arr[] = {7,8,3,1,2};
+    // int arr[] = {7,8,3,1,2};
+    // for(int i = 0 ; i<arr.length-1 ; i++){
+    //     int smallest = i;
+    //     for(int j =1+i ; j <arr.length; j++ ){
+    //         if(arr[smallest]>arr[j]){
+    //             smallest = j;
+    //         }
+    //     }
+    //     int temp = arr[smallest];
+    //     arr[smallest] = arr[i];
+    //     arr[i] = temp;
+    // }
+    // printArray(arr);
+
+
+    // Q--> using bubble sort
+    int arr[] = {5,2,8,1,3};
+    
     for(int i = 0 ; i<arr.length-1 ; i++){
-        int smallest = i;
-        for(int j =1+i ; j <arr.length; j++ ){
-            if(arr[smallest]>arr[j]){
-                smallest = j;
+
+        for(int j = 0 ;j<arr.length-1-i ; j++){
+            if(arr[j]>arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
+        
         }
-        int temp = arr[smallest];
-        arr[smallest] = arr[i];
-        arr[i] = temp;
-    }
-    printArray(arr);
+}
+    System.out.println("Sorted array:");
 
 
+    for(int i=0 ; i<arr.length; i++){
+        System.out.println(arr[i] + " ");
+        }
     }
 }

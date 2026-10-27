@@ -114,6 +114,8 @@ class Strings{
         System.out.println(name11.compareTo(name11));
         System.out.println(name11.substring(0,1));
         System.out.println(name11.length());
+        System.out.println(name11.insert(3," and vivek"));
+        System.out.println(name11.insert(3," and vivek"));
 
 
         
